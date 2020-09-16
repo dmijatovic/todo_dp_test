@@ -1,7 +1,7 @@
 # Todo tokio deadpool data api
 
-This library is specifically developed for CRUD operations on todo_db. It uses tokio and deadpool for achieving this.
-The CRUD operations are done on todo_list and todo_item tables of todo_db.
+This library is developed for CRUD operations on Postgres todo_db. It uses tokio and deadpool.
+The operations are done on todo_list and todo_item tables of todo_db.
 
-This crate is used in this bench project with various http libraries like actix-web, hyper and so on. The idea is to
-test the performance of http libraries with the same CRUD operations and see if there is a difference in the performance.
+The crate is used in [this rust bench project](https://github.com/dmijatovic/rust-api-bench) with various http libraries like actix-web, hyper and so on. The idea is to
+test the performance of http libraries with the same CRUD operations. By setting all database code into this lib I ensure thse operations are performed in exactly same manner for each tested http library.
